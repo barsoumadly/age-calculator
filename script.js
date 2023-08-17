@@ -14,9 +14,9 @@ const daysEL = document.getElementById('days');
 // Calculating difference between dates
 const calcDifference = function (birthDate) {
   const now = new Date();
-  const years = now.getFullYear() - birthDate.getFullYear();
-  const months = now.getMonth() - birthDate.getMonth();
-  const days = now.getDate() - birthDate.getDate();
+  const years = Math.abs(now.getFullYear() - birthDate.getFullYear());
+  const months = Math.abs(now.getMonth() - birthDate.getMonth());
+  const days = Math.abs(now.getDate() - birthDate.getDate());
   return [years, months, days];
 };
 
